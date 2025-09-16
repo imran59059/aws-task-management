@@ -61,7 +61,7 @@ const Task2 = () => {
 
             <div>
                 <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder='Enter Task' className='border-b-2' />
-                <button className='bg-green-500 px-1 rounded mx-2' onClick={handleAddTask}>Add</button>
+                <button className='bg-blue-500 text-white px-1 rounded mx-2' onClick={handleAddTask}>Add</button>
             </div>
             Tasks: {tasks?.length}
             <div className="w-full overflow-x-auto my-5 h-100">
@@ -70,9 +70,9 @@ const Task2 = () => {
                         <tr>
                             <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700 border-b">Sl. No.</th>
                             <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700 border-b">Task</th>
-                            <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700 border-b">Details</th>
+                            {/* <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700 border-b">Details</th>
                             <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700 border-b">Status</th>
-                            <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700 border-b">Action</th>
+                            <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700 border-b">Action</th> */}
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
@@ -80,15 +80,9 @@ const Task2 = () => {
                             <tr key={t.taskId} className="hover:bg-gray-50">
                                 <td className="px-4 py-2 text-sm text-gray-600">{t.taskId}</td>
                                 <td className="px-4 py-2 text-sm text-gray-600">{t.title}</td>
-                                <td className="px-4 py-2 text-sm text-gray-600">{t.description}</td>
-                                <td className="px-4 py-2 text-sm">
-                                    <span className="px-2 py-1 text-xs font-medium text-green-800 bg-green-100 rounded-full">
-                                        <span className='text-red-500'>{t.status}</span>
-                                    </span>
-                                </td>
-                                <td>
+                                {/* <td>
                                     <button className="px-4 py-2 text-sm text-red-600 cursor-pointer hover:text-red-800">Delete</button>
-                                </td>
+                                </td> */}
                             </tr>
                         )}
                     </tbody>
