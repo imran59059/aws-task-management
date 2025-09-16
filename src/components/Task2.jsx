@@ -56,7 +56,7 @@ const Task2 = () => {
     }, [])
 
     return (
-        <div className='bg-green-50 py-2 w-full px-5'>
+        <div className='bg-green-50 py-2 w-full h-screen px-5'>
             <h1 className='text-xl underline py-5'>Tasks Management - IMRAN ALI</h1>
 
             <div>
