@@ -28,7 +28,7 @@ const Task2 = () => {
                 desc: 'Test',
                 status: 'Open'
             }])
-
+            setInput('');
         } catch (err) {
             console.log({ err });
         }
@@ -57,13 +57,13 @@ const Task2 = () => {
 
     return (
         <div className='bg-green-50 py-2 w-full px-5'>
-            <h1 className='text-xl'>Tasks Management</h1>
+            <h1 className='text-xl underline py-5'>Tasks Management - IMRAN ALI</h1>
 
             <div>
-                <input type="text" onChange={(e) => setInput(e.target.value)} placeholder='Enter Task' className='border-b-2' />
+                <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder='Enter Task' className='border-b-2' />
                 <button className='bg-green-500 px-1 rounded mx-2' onClick={handleAddTask}>Add</button>
             </div>
-            {tasks?.length}
+            Tasks: {tasks?.length}
             <div className="w-full overflow-x-auto my-5 h-100">
                 <table className="border border-gray-200 rounded-lg shadow-md">
                     <thead className="bg-gray-100">
